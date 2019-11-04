@@ -1,26 +1,312 @@
-<!DOCTYPE html>
-<script>
-function browserRedirect() {
-    var sUserAgent = navigator.userAgent.toLowerCase();
-    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-        window.location.href="https://blog.csdn.net/UserNamezhangxi";
-    } else {
-        window.location.href="https://blog.csdn.net/UserNamezhangxi";
-    }
-}
-browserRedirect();
-</script>
 <html>
 
+<meta charset="utf-8">
+<title>网址大全</title>
+<script type="text/javascript">
+	(function (doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
+			};
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+</script>
+<style type="text/css">
+
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    .cls_bd {
+        padding-right: 10%;
+        list-style: none;
+    }
+
+    .site-item {
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 206px;
+        height: 10px;
+        line-height: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 30px;
+        padding: 6px 0 6px;
+        vertical-align: top;
+        font-size: 44px;
+        color: #333;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .inline-block-wrapper {
+        width: 40%;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .icon-site {
+        display: inline-block;
+        _display: inline;
+        _zoom: 1;
+        max-width: 350px;
+        height: 44px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-left: 55px;
+        _padding-left: 7px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: top;
+        background-size: 44px 44px;
+        background-repeat: no-repeat;
+    }
+
+    .icon-site_sub {
+        display: inline-block;
+        _display: inline;
+        _zoom: 1;
+        max-width: 155.5px;
+        height: 44px;
+        padding-top: 10px;
+        padding-left: 15px;
+        _padding-left: 7px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: top;
+        background-size: 44px 44px;
+        background-repeat: no-repeat;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #333;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #f50;
+    }
+
+    .site-manage {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
 <body>
-<h1>Hello World!</h1>
+
+<div class="site-manage">
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://www.10jqka.com.cn"
+                   style="background-image: url(./img/ths.png)"
+                >同花顺</a>•<a class="icon-site_sub" href="http://www.iwencai.com"
+            >i问财</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.legulegu.com/stockdata/shenzhenPE"
+                   style="background-image: url(./img/lg.png)"
+                >深证A股市盈率</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield/"
+                   style="background-image: url(./img/guoqi.png)"
+                >中国10年期国债</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://www.aastocks.com/sc/stocks/analysis/dividend.aspx?symbol=01234"
+                   style="background-image: url(./img/asdk.png)"
+                >港股派息比率</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.legulegu.com/stockdata/market/hsi"
+                   style="background-image: url(./img/lg.png)"
+                >恒生指数市盈率</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://cn.investing.com/rates-bonds/u.s.-10-year-bond-yield"
+                   style="background-image: url(./img/us.png)"
+                >美国国债收益率</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.gurufocus.com/stock/NVO/dividend"
+                   style="background-image: url(./img/logo_small_new.png)"
+                >美股派息比率查询</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://xueqiu.com"
+                   style="background-image: url(./img/xueqiu.png)"
+                >雪球</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.legulegu.com/stockdata/market/sandp"
+                   style="background-image: url(./img/lg.png)"
+                >标普500指数市盈率</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.sec.gov/edgar/searchedgar/companysearch.html"
+                   style="background-image: url(https://www.sec.gov/ecms/images/sec-logo.png)"
+                >美股财报</a>•<a class="icon-site_sub" href="https://www.sec.gov/edgar/searchedgar/companysearch.html"
+            >美国REITs</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://www.stats.gov.cn/"
+                   style="background-image: url(./img/gjtjj.png)"
+                >国家统计局</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://www.hkexnews.hk/listedco/listconews/advancedsearch/search_active_main_c.aspx"
+                   style="background-image: url(./img/HK.png)"
+                >港股财报</a>•<a class="icon-site_sub" href="http://www.hkexnews.hk/listedco/listconews/advancedsearch/search_active_main_c.aspx"
+            >香港REITs</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.rong360.com/calculator/fangdai.html"
+                   style="background-image: url(./img/rong.png)"
+                >房贷计算器</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://www.yaocaiwuziyou.com/calculator.html"
+                   style="background-image: url(./img/wm.png)"
+                >微淼计算器</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.jisilu.cn/data/etf/#index"
+                   style="background-image: url(./img/jisilu.png)"
+                >指数基金市盈率</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://www.cninfo.com.cn/new/index"
+                   style="background-image: url(./img/juchao.png)"
+                >A股财报下载</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://fundf10.eastmoney.com/fhsp_510880.html"
+                   style="background-image: url(./img/ttjj.png)"
+                >数基金分红</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="https://www.futunn.com/download/index"
+                   style="background-image: url(./img/ftnn.png)"
+                >富途牛牛下载</a>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="cls_bd">
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="http://www.yaocaiwuziyou.com/wap.php/Home/Index/Userhu?id=3"
+                   style="background-image: url(./img/ht.png)"
+                >华泰万8开户</a>
+            </div>
+        </li>
+        <li class="site-item">
+            <div class="inline-block-wrapper">
+                <a class="icon-site"
+                   href="www.yaocaiwuziyou.com/wap.php/Home/Index/Userhuwai?id=3"
+                   style="background-image: url(./img/ftzq.png)"
+                >富途证券开户</a>
+            </div>
+        </li>
+    </ul>
+    <span>祝大家早日财务自由</span>
+</div>
 </body>
+
 </html>
+
